@@ -1,0 +1,31 @@
+<table>
+	<th>Details...</th>
+	
+	<% @show.each do |i| %>
+
+
+	<tr>  <td>Name:</td><td><%= i.name %> </td></tr>
+	
+	<tr>  <td>Account no.:</td><td><%= i.account_no%> </td></tr>
+	<tr>  <td>Account Type:</td><td><%= i.account_type %> </td></tr>
+	<tr>  <td>Sex:</td><td><%= i.sex %> </td></tr>
+	<tr>  <td>Status:</td><td><%= i.status %> </td></tr>
+	<tr>  <td>Dob:</td><td><%= i.dob %> </td></tr>
+	
+    <tr>  <td>id:</td><td><%= i.id %> </td></tr>
+		<tr><td> <%=link_to 'Edit',:action=>'edit',:id=>i.id,:controller=>'cstmr' %>|
+		 <%=link_to 'Show',:action=>'details',:id=>i.id,:controller=>'cstmr' %>|
+		 <%=link_to 'delete',:action=>'delete',:id=>i.id,:controller=>'cstmr' %>|
+		 <%=link_to 'Create account',:action=>'index',:id=>i.id,:controller=>'bank' %></td></tr>
+		
+		<tr><td> </td></tr>
+		<tr><td> </td></tr>
+
+	 <% end %>
+
+	 <%=link_to 'Home',:action=>'home',:controller=>'cstmr' %>|
+     <%=link_to 'New',:action=>'index',:controller=>'cstmr' %>
+</table>
+<hr/>
+<%=link_to 'Home',:action=>'home',:controller=>'cstmr' %>|
+<%=link_to 'New',:action=>'index',:controller=>'cstmr' %>

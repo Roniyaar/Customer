@@ -1,0 +1,22 @@
+<table>
+
+
+<%= form_for :data, :url=> {:action=>'create',:id=>@s} do |i| %>
+
+						 <h1>Please fill up this form....</h1>
+
+
+	<th>Enter Your Details...</th>
+
+						 
+
+		<tr> <td>Name:</td><td><%= i.text_field :name %> </td></tr>
+		<tr>  <td>Age:</td><td><%= i.text_field :age %> </td></tr>
+		<tr>  <td>Account Number:</td><td><%= i.text_field :account_no %> </td></tr>
+		<tr> <td>Account Type:</td><td><%= i.text_field :account_type %> </td></tr>
+		<tr>  <td>Amount</td><td><%= i.text_field :ammount %> </td></tr>
+		
+
+		 <td><%= i.submit'submit' %> </td>
+	 <% end %>
+</table>

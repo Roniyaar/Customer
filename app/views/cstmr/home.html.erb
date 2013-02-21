@@ -1,0 +1,33 @@
+
+  <table align = "right">
+<%= form_for :data, :url=> {:action=>'create'} do |i| %>
+
+
+<tr > <h1>     Welcome !</h1>
+  <td>Username</td><td><%= i.text_field :username %> </td></tr>
+<tr> <td>Password</td><td><%= i.password_field(:password) %> </td>
+  <td><%= i.submit'Login' %> </td></tr>
+<% end %>
+</table>
+<table align="center">
+
+<p><%=link_to 'Click here to continue...',:action=>'welcome' %></p>
+<%= form_for :data, :url=> {:method => 'get'} do |i| %>
+<tr>  <td></td><td></td><td></td><td></td>
+  <td><%= i.text_field :search, :controller => 'cstmr' %> </td>
+     <td><%= i.submit'Search' %> </td></tr>
+     <% end %>
+
+<style type="text/css">
+    body { background-color: orange; color: #666; text-align: center; font-family: arial, sans-serif; }
+    div.dialog {
+      width: 25em;
+      padding: 0 4em;
+      margin: 4em auto 0 auto;
+      border: 1px solid #ccc;
+      border-right-color: #999;
+      border-bottom-color: #999;
+    }
+    h1 { font-size: 200%; color: black; line-height: 1.5em; }
+  </style>
+</table>

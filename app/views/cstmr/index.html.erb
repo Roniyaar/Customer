@@ -1,0 +1,50 @@
+
+
+
+
+						
+
+ <h1>     Please fill up this form....</h1>
+<table >
+<%= form_for :data, :url=> {:action=>'create'} do |i| %>
+	<th>Enter Your Details...</th>
+
+						 
+
+	<tr> <td>Name:</td><td><%= i.text_field :name %> </td></tr>
+	
+		<tr>  <td>Age:</td><td><%= i.text_field :age %> </td></tr>
+	<tr><td>Sex:</td><td>
+			<%= i.radio_button(:sex, "Male") %>
+			<%= i.label("Male") %>
+			<%= i.radio_button(:sex, "Female") %>
+			<%= i.label("Female") %></td></tr>
+    <tr><td><%= i.label :status %><br /></td></tr>
+  <tr><td>  <%= i.select :status,[['Select Status',''],['Single','single'],['Married','married']]%></td></tr>
+
+
+  <tr><td> <%= i.label :dob %><br /></td><td>
+    <%= i.datepicker :dob , changeMonth: true,
+      changeYear: true,yearRange: "1900:2500",showAnim: "slide" %></td></tr>
+
+		
+	
+		 <td><%= i.submit'submit' %> </td>
+	 <% end %>
+</table>
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+
+
+
